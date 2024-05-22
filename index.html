@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wahoo ERG Trainer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div id="startMenu">
+            <button id="createTraining">Create Training</button>
+            <button id="startTrainingMenu">Start a Training</button>
+            <button id="myTrainings">My Trainings</button>
+            <button id="myFTP">My FTP</button>
+            <button id="myDevice">My Device</button>
+        </div>
+        <div id="createTrainingMenu" style="display: none;">
+            <input type="text" id="trainingName" placeholder="Training name">
+            <div id="intervals"></div>
+            <button id="addInterval">Add Interval</button>
+            <button id="saveTraining">Save Training</button>
+            <button id="backToMenuFromCreate">Back to Menu</button>
+        </div>
+        <div id="startTrainingScreen" style="display: none;">
+            <select id="trainingSelect"></select>
+            <button id="selectTraining">Select Training</button>
+            <button id="backToMenuFromStart">Back to Menu</button>
+        </div>
+        <div id="waitingScreen" style="display: none;">
+            <p>Training: <span id="selectedTrainingName"></span></p>
+            <button id="startTraining">Start Training</button>
+        </div>
+        <div id="trainingScreen" style="display: none;">
+            <p>Total Time Remaining: <span id="totalTimeRemaining"></span></p>
+            <p>Interval Time Remaining: <span id="currentIntervalTime"></span></p>
+            <p>Target Wattage: <span id="currentWattage"></span></p>
+            <p>Target Cadence: <span id="currentCadence"></span></p>
+            <p>Current Cadence: <span id="currentCadenceValue"></span></p>
+            <button id="endTraining">End Training</button>
+        </div>
+        <div id="myFTPMenu" style="display: none;">
+            <input type="number" id="ftpInput" placeholder="FTP">
+            <button id="saveFTP">Save FTP</button>
+            <button id="backToMenuFromFTP">Back to Menu</button>
+        </div>
+        <div id="myDeviceMenu" style="display: none;">
+            <p id="deviceStatus">Device status: Not connected</p>
+            <button id="connectDevice">Connect Device</button>
+            <button id="backToMenuFromDevice">Back to Menu</button>
+        </div>
+        <div id="myTrainingsMenu" style="display: none;">
+            <ul id="trainingList"></ul>
+            <button id="backToMenuFromTrainings">Back to Menu</button>
+        </div>
+    </div>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
